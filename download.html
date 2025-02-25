@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termux Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+    <div class="container mx-auto p-6">
+        <div class="bg-gray-800 p-6 rounded-lg shadow-xl">
+            <h1 class="text-3xl font-bold text-green-400">📱 Panduan Menjalankan di Termux</h1>
+            <p class="mt-2 text-gray-300">Ikuti langkah-langkah berikut untuk menjalankan script di Termux:</p>
+            <ol class="list-decimal list-inside mt-4 text-gray-300">
+                <li>Pastikan Termux sudah terinstall di perangkat Anda.</li>
+                <li>Buka Termux dan jalankan perintah berikut satu per satu:</li>
+            </ol>
+            <pre class="mt-4 bg-gray-700 p-4 rounded-lg overflow-auto text-sm">
+# Update dan install dependencies
+yes | pkg update && yes | pkg upgrade
+pkg install nodejs nano
+
+# Clone script atau buat file manual
+git clone https://github.com/user/repo.git
+cd repo
+nano script.js  # Jika ingin edit script manual
+
+# Install axios
+npm install axios
+
+# Jalankan script
+node script.js
+            </pre>
+            <p class="mt-2 text-gray-300">Pastikan file <code>ua.txt</code> tersedia dalam folder yang sama sebelum menjalankan script.</p>
+            <div class="mt-4 flex space-x-4">
+                <a href="index.php" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg shadow-md">
+                    🔙 Kembali
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
