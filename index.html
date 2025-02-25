@@ -23,18 +23,18 @@
             </nav>
         </div>
         <div class="theme-switcher">
-  <button onclick="toggleTheme()">🌓</button>
-</div>
+            <button onclick="toggleTheme()">🌓</button>
+        </div>
 
-<script>
-  function toggleTheme() {
-    document.documentElement.setAttribute('data-theme',
-      document.documentElement.getAttribute('data-theme') === 'light' 
-        ? 'dark' 
-        : 'light'
-    );
-  }
-</script>
+        <script>
+            function toggleTheme() {
+                document.documentElement.setAttribute('data-theme',
+                    document.documentElement.getAttribute('data-theme') === 'light' 
+                        ? 'dark' 
+                        : 'light'
+                );
+            }
+        </script>
     </header>
 
     <section class="hero">
@@ -49,35 +49,18 @@
         <section class="featured-posts">
             <h2>Latest Downloads</h2>
             <div class="post-grid">
-                <?php 
-                // Sample posts data (in a real application, this would come from a database)
-                $posts = [
-                    [
-                        'title' => 'vISitor',
-                        'excerpt' => 'A metod ddos php killed powerfull free download without any delay',
-                        'date' => 'February 25, 2025',
-                        'category' => 'Method',
-                        'image' => 'https://img.youtube.com/vi/vF6kFe873dI/maxresdefault.jpg',
-                        'download_link' => '#download1'
-                    ]
-                ];
-
-                // Loop through and display posts
-                foreach ($posts as $post) {
-                    echo '<article class="post-card">';
-                    echo '<div class="post-image" style="background-image: url(\'' . $post['image'] . '\')"></div>';
-                    echo '<div class="post-content">';
-                    echo '<span class="category">' . $post['category'] . '</span>';
-                    echo '<h3>' . $post['title'] . '</h3>';
-                    echo '<p>' . $post['excerpt'] . '</p>';
-                    echo '<div class="post-meta">';
-                    echo '<span class="date"><i class="far fa-calendar"></i> ' . $post['date'] . '</span>';
-                    echo '<a href="' . $post['download_link'] . '" class="download-link"><i class="fas fa-download"></i> Download</a>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</article>';
-                }
-                ?>
+                <article class="post-card">
+                    <div class="post-image" style="background-image: url('https://img.youtube.com/vi/vF6kFe873dI/maxresdefault.jpg')"></div>
+                    <div class="post-content">
+                        <span class="category">Method</span>
+                        <h3>vISitor</h3>
+                        <p>A metod ddos php killed powerfull free download without any delay</p>
+                        <div class="post-meta">
+                            <span class="date"><i class="far fa-calendar"></i> February 25, 2025</span>
+                            <a href="#download1" class="download-link"><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
